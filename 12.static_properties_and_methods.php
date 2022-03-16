@@ -1,0 +1,37 @@
+<?php include "inc/header.php";
+
+class UserData {
+	public $user;
+	public $userId;
+	const NAME = "Jaime Velasquez Jr";
+	public static $age = "30";
+
+	public function __construct($user, $userId) {
+		$this->user = $user;
+		$this->userId = $userId;
+		echo "User name is {$user} and User ID is {$userId}";
+	}
+
+	public static function display() {
+		echo "Full name is " . UserData::NAME . "<br>";
+		echo "Age is " . self::$age;
+	}
+
+	public function __desctruct() {
+		unset($user);
+		unset($userId);
+	}
+
+}
+
+$user = "Jaime";
+$userid = 13;
+
+$url = new UserData($user, $userid);
+echo '<br>';
+//$url->display();
+UserData::display();
+
+include "inc/footer.php"; ?>
+
+<!-- User name is ?? and User ID is ?? -->
