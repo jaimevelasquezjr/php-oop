@@ -1,4 +1,6 @@
-<?php include "inc/header.php";
+<?php
+
+   include "inc/header.php";
 
 class UserData {
 	public $user;
@@ -40,6 +42,8 @@ $ad = new Admin($user, $userid);
 $ad->level = "Administrator";
 $ad->display();
 
-include "inc/footer.php"; ?>
+?>
+
+<?php include "inc/footer.php"; ?>
 
 <!-- User name is ?? and User ID is ?? -->
